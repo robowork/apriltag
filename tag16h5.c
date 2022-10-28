@@ -28,44 +28,45 @@ either expressed or implied, of the Regents of The University of Michigan.
 #include <stdlib.h>
 #include "tag16h5.h"
 
-static uint64_t codedata[30] = {
-   0x00000000000027c8UL,
-   0x00000000000031b6UL,
-   0x0000000000003859UL,
-   0x000000000000569cUL,
-   0x0000000000006c76UL,
-   0x0000000000007ddbUL,
-   0x000000000000af09UL,
-   0x000000000000f5a1UL,
-   0x000000000000fb8bUL,
-   0x0000000000001cb9UL,
-   0x00000000000028caUL,
-   0x000000000000e8dcUL,
-   0x0000000000001426UL,
-   0x0000000000005770UL,
-   0x0000000000009253UL,
-   0x000000000000b702UL,
-   0x000000000000063aUL,
-   0x0000000000008f34UL,
-   0x000000000000b4c0UL,
-   0x00000000000051ecUL,
-   0x000000000000e6f0UL,
-   0x0000000000005fa4UL,
-   0x000000000000dd43UL,
-   0x0000000000001aaaUL,
-   0x000000000000e62fUL,
-   0x0000000000006dbcUL,
-   0x000000000000b6ebUL,
-   0x000000000000de10UL,
-   0x000000000000154dUL,
-   0x000000000000b57aUL,
+static uint64_t codedata[1] = {
+   0x0000000000002FFDUL
+   // 0x00000000000031b6UL,
+   // 0x0000000000003859UL,
+   // 0x000000000000569cUL,
+   // 0x0000000000006c76UL,
+   // 0x0000000000007ddbUL,
+   // 0x000000000000af09UL,
+   // 0x000000000000f5a1UL,
+   // 0x000000000000fb8bUL,
+   // 0x0000000000001cb9UL,
+   // 0x00000000000028caUL,
+   // 0x000000000000e8dcUL,
+   // 0x0000000000001426UL,
+   // 0x0000000000005770UL,
+   // 0x0000000000009253UL,
+   // 0x000000000000b702UL,
+   // 0x000000000000063aUL,
+   // 0x0000000000008f34UL,
+   // 0x000000000000b4c0UL,
+   // 0x00000000000051ecUL,
+   // 0x000000000000e6f0UL,
+   // 0x0000000000005fa4UL,
+   // 0x000000000000dd43UL,
+   // 0x0000000000001aaaUL,
+   // 0x000000000000e62fUL,
+   // 0x0000000000006dbcUL,
+   // 0x000000000000b6ebUL,
+   // 0x000000000000de10UL,
+   // 0x000000000000154dUL,
+   // 0x000000000000b57aUL,
 };
 apriltag_family_t *tag16h5_create()
 {
    apriltag_family_t *tf = calloc(1, sizeof(apriltag_family_t));
    tf->name = strdup("tag16h5");
    tf->h = 5;
-   tf->ncodes = 30;
+   // tf->ncodes = 30;
+   tf->ncodes = 1;
    tf->codes = codedata;
    tf->nbits = 16;
    tf->bit_x = calloc(16, sizeof(uint32_t));
